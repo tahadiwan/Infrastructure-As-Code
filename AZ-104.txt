@@ -1,0 +1,229 @@
+ Azure 
+AZ-104 Microsoft Azure Administrator Certification Prep
+
+Chapter 1 - Introduction to Azure Cloud
+topics- virtual machine, storage, virtual networking, identities and goverance
+
+
+
+Chapter 2 - Introduction - supplementary (INTRODUCTION)
+
+
+
+
+
+chapter 3 -
+
+*What is cloud madeup of?
+ans- Resources 
+
+* Resources - Resources are azure managesd entities like Vm,storage account, virtual networks etc..
+
+* Resource group - Resource group is the logical container or grouping of resources.
+
+* Azure Subscription - It is a billing unit of azure cloud. Azure Subscription is a logical container of Resource group and associated resources.
+
+* ARM - Azure Resource manager templates - it is the orchestration layer for managing the azure cloud. With the help of ARM template we can automate our task.
+
+
+*Azure Powershell - Azure Cloud Shell is an interactive and browser-accessible shell for managing Azure resources.
+
+* what is azure cli - Azure command line interface.
+ - it is the command-line utility to manage azure resources
+ - we can create azure resources and manage azure resources without login to azure portal.We can Install Azure CLI on our local machine.
+ - Create scripts to automate tasks.
+
+* What is Azure Powershell 
+ - It is a cmdlets for managing azure resources
+ - we can create azure resources and manage azure resources without login to azure portal.
+ - Create scripts to automate tasks.
+
+
+
+
+
+
+Chapter 4 - Goverance and Identities
+
+*Azure Subscription - Azure Subscription is a billing unit of azure cloud 
+In Azure Subscription we have Resource Group 
+In Resource Group we have Resources.
+Azure Subscription contains resource group and their resources.
+Types of Subscriptions- Pay-as-you-go , free-trial, Azure Plan, Azure for Students,Enterprise agreement support
+
+* Subscriptions are named based on the department or team, so that billing can be easily associated with a given bussiness unit.
+*Subscription Contain Resources group that contain resources.
+
+Management Group - It is a logical container of Subscription
+*If our Organisation has many subscription then with the help of managment group we can manage access,policies for those subscription.
+
+Managment group and subscription both work as Parent and Child.If we apply policy to managment group(parent) then it will automatically apply to Subscription (child)
+for rg- if we want that no one can spin VM in East US region, Then if someone create VM in East US then it will give error or it will not create that virtual machine.
+
+The security Policies cannot be edited by subscription owner.
+no one can access to the azure management group only Azure global administrator has the access to root managment group and can assign any role to azure users.
+
+
+
+*Azure Policy- Using Azure policies we can prohibited resourceS. we can control costs. we can restrict services access.
+
+
+
+*Tagging Resources- Tags are NAME/VALUE pair that can categories resources.
+for eg - i have many resources created and i have to find some resources then, if i created tagg and attach to that resource then it will be easy to find that resource. we can filter taht and find that resource.
+
+e.g.- If i created Resource Group and  i tagged that resource group with NAME/VALUE pair and i created a VM in that resource group then it will not inherit that Tag to the VM resources i have to create a new tag for the reources.
+Tag is not inhertance.
+
+
+
+*Locking and Moving Resources-
+Lock allows you to create permission to resources. You can LOCK Subscription,Resource group, Resources.
+Types Of LOCK- Delete & Read-only
+Delete- In delete, user can create resource,update resources but cannot delete resources 
+Read-only- In Read-only, user can only read resources but cannot do changes cannot delete that resources.
+
+Moving Resources - It mens we can move resources from Resource group to another and we can also move resource group from one subscription to another subscription.
+
+
+
+Chapter-5
+
+*Azure Active Directory-
+Azure AD is a cloud based service.It is a centralized repository where we can create users,group. we can also reset password of users.we can create bulk user at a time.
+Manage identity security- Enable MFA,Control resource access, and provide policy-based controls
+*IAM- Identity and Access Management(IAM)
+It is a cloud based service for AZure to provide Identity.
+
+provide Identity Resources-Create users and group
+
+provide Identity security- enable MFA, control resource access, create policies.
+
+With Azure AD we can audit logs, Security monitoring, identity protection and risk managment.
+
+*Types of Users
+Administrator- A user with high role assigned.
+Members- A users with less privelege roles.
+Guest- A users which are invited to Azure AD.
+
+
+
+
+
+*Creating Administrative Units.
+
+
+
+
+
+
+*Describing SSPR
+Self Service Password Reset means users can reset their password withou help desk administrators.
+Enables users to reset their passwords.
+Increased productivity.
+Decreased admin overhead.
+
+*Authentication methods--
+1)Mobile apps - Authentication via app notification - like microsoft authenticator or cisco Duo.
+2)Mobile code - Authentication via time based code 
+3)Email       -Authentication  via email - send as a link or code on regestired email.
+4)Mobile Phone - Authentication via mobile phone like calls or SMS
+
+
+
+*Azure AD device management-
+1)Azure AD Registerd- allowing to Bring Your Own Device (BYOD) with a microsoft account.
+2)Azure AD joined - It means the laptop is owned by organization and can access with work account.
+3)Hybrid AD joined - It means device is joined Azure AD + on premises Active Directory.
+
+
+
+
+
+
+
+*Role-Based Access Control-
+Who? can do What? and Where?
+
+
+
+
+
+
+
+
+
+*Azure Storage - 
+Azure Storage account contains all of ours azure data storage objects including Azure Queues, Azure Table, Azure Blob, Azure Files.
+
+*Access Tier- 
+HOT- Frequently Access Data
+Cold- Infrequently Data
+Archive - Rarely Accessed Data
+
+*Azure Queue - It is a service for storing large number of messages.
+
+*Azure File - It is a cloud based service for file-sharing.
+
+*Azure Blob - It is cloud based service were we can share object oriented data like Images, Videos, MP3 files MP4 files.
+
+*Azure Table - It is cloud based service were we can store data in form of tables like semi-tructured data, Non-relational. 
+
+
+
+
+1)Azure Blob- It is a Sub-resource of Storage account.Blob storage is a object based and can be accessible from anywhere through internet HTTP.
+Store item such as : iamges, videos, Text files, Log Files.
+Types of Blob-
+1)Block Blob - Storing Images, Videos. Best suited for straming
+2)Append Blobs - Log files.
+3)Page Blobs - VM os disk
+
+Container Access Levels -
+*Private (no anonymous access)
+*Blob (anonymous access to blob)
+*Container (anonymous access to container and its blob)
+
+
+*Object Replication - Object Replication asynchronously copies block blobs between storage accounts.
+
+*Blob Lifecycle Management - With the help of these rule we can move Access tier hot to cool, cool to archieve and we can delete Blob also.
+
+
+2)Azre Files - Azure Files is a sub-service or sub-resource in azure storage account.
+
+
+
+
+
+
+*Storage Network Access
+IN storage network access - Public Endpoints, Restricted access, Private access
+
+
+*Secure Storage - By default, all data stored in azure storage account in any azure storage service is secured using SSE-storage secure encryption.
+
+*Access keys - It menas it will provide unlimited access
+*Shared Access Signature- It means it will provide limited access to the resource.
+*Azure AD Authentication - Uses azure AD or AZure RBAC to provide authentication.
+
+
+
+*Azure Jobs
+Azure jobs means moving large amount of data between on-premises and azure storage.
+Exporting and Importing large ammount of data
+
+
+*Storage Utilities
+In storage utilities we have storage explorer or AZcopy
+
+storage explorer - manage storage account,Use shared access signatures(SAS),Provide GUI
+
+AZcopy- Manage storage account,Use storage access signatures(SAS),Scripting capabilities.
+
+
+
+
+
+
+
